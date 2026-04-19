@@ -10,6 +10,7 @@ gem 'bootsnap', require: false
 
 ##-- rails application helper gems --##
 gem 'acts-as-taggable-on'
+gem 'acts_as_tenant'
 gem 'attr_extras'
 gem 'browser'
 gem 'hashie'

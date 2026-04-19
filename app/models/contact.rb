@@ -40,6 +40,7 @@ class Contact < ApplicationRecord
   include Labelable
   include LlmFormattable
   include Wisper::Publisher
+  acts_as_tenant(:account)
 
   self.inheritance_column = :_type_disabled
   attr_accessor :skip_default_pipeline_assignment
@@ -55,6 +56,7 @@ class Contact < ApplicationRecord
             format: { with: /\+[1-9]\d{1,14}\z/, message: I18n.t('errors.contacts.phone_number.invalid') }
   validates :tax_id, allow_blank: true, uniqueness: true, length: { maximum: 14 }
   validates :website, allow_blank: true, format: { with: URI::DEFAULT_PARSER.make_regexp(%w[http https]), message: 'must be a valid URL' }
+  belongs_to :account, optional: true
   has_many :conversations, dependent: :destroy_async
   has_many :contact_inboxes, dependent: :destroy_async
   has_many :csat_survey_responses, dependent: :destroy_async

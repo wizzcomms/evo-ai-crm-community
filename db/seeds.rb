@@ -2,6 +2,15 @@
 GlobalConfig.clear_cache
 ConfigLoader.new.process
 
+if defined?(Account) && ActiveRecord::Base.connection.data_source_exists?('accounts')
+  default_account = Account.find_or_create_by!(subdomain: 'default') do |account|
+    account.name = 'WizzDesk'
+    account.default = true
+  end
+  default_account.update!(default: true) unless default_account.default?
+  ActsAsTenant.current_tenant = default_account if defined?(ActsAsTenant)
+end
+
 ## Seeds productions
 if Rails.env.production?
   # Setup Onboarding flow

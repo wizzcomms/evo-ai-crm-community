@@ -25,11 +25,14 @@
 class ContactInbox < ApplicationRecord
   include Pubsubable
   include RegexHelper
+  acts_as_tenant(:account)
   validates :inbox_id, presence: true
   validates :contact_id, presence: true
   validates :source_id, presence: true
   validate :valid_source_id_format?
+  before_validation :assign_account_from_associations, on: :create
 
+  belongs_to :account, optional: true
   belongs_to :contact
   belongs_to :inbox
 
@@ -80,5 +83,9 @@ class ContactInbox < ApplicationRecord
   def valid_source_id_format?
     validate_twilio_source_id if inbox.channel_type == 'Channel::TwilioSms'
     validate_whatsapp_source_id if inbox.channel_type == 'Channel::Whatsapp'
+  end
+
+  def assign_account_from_associations
+    self.account ||= inbox&.account || contact&.account || ActsAsTenant.current_tenant || Account.default
   end
 end

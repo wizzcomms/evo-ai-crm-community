@@ -2,6 +2,7 @@
 
 require_relative 'boot'
 require_relative '../lib/evolution_app'
+require 'acts_as_tenant'
 
 require 'rails/all'
 

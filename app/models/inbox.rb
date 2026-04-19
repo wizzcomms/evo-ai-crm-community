@@ -36,6 +36,7 @@ class Inbox < ApplicationRecord
   include Avatarable
   include OutOfOffisable
   include InstanceNameSanitizable
+  acts_as_tenant(:account)
 
   # Not allowing characters:
   validates :name, presence: true
@@ -46,7 +47,9 @@ class Inbox < ApplicationRecord
   validate :validate_default_conversation_status
 
   before_validation :sanitize_instance_name_and_set_display_name
+  before_validation :assign_account_from_current_tenant, on: :create
 
+  belongs_to :account, optional: true
   belongs_to :channel, polymorphic: true, dependent: :destroy
 
   # has_many :c, dependent: :destroy_async # Campaign model doesn't exist
@@ -255,6 +258,10 @@ class Inbox < ApplicationRecord
 
     # Sanitizar o name para uso como identificador usando método do concern
     self.name = sanitize_instance_name(name)
+  end
+
+  def assign_account_from_current_tenant
+    self.account ||= ActsAsTenant.current_tenant || Account.default
   end
 end
 

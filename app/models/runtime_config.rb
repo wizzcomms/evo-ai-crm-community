@@ -36,6 +36,8 @@ class RuntimeConfig < ApplicationRecord
   end
 
   def self.account
+    Account.default
+  rescue NameError, ActiveRecord::StatementInvalid
     get_json('account')
   end
 end

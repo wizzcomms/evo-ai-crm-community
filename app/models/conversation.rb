@@ -56,10 +56,13 @@ class Conversation < ApplicationRecord
   include PushDataHelper
   include ConversationMuteHelpers
   include Wisper::Publisher
+  acts_as_tenant(:account)
 
   validates :inbox_id, presence: true
   validates :contact_id, presence: true
+  belongs_to :account, optional: true
   before_validation :validate_additional_attributes
+  before_validation :assign_account_from_associations, on: :create
   before_create :ensure_display_id
   validates :additional_attributes, jsonb_attributes_length: true
   validates :custom_attributes, jsonb_attributes_length: true
@@ -218,6 +221,12 @@ class Conversation < ApplicationRecord
 
   def is_boosted_post?
     additional_attributes&.dig('is_boosted') == true
+  end
+
+  private
+
+  def assign_account_from_associations
+    self.account ||= inbox&.account || contact&.account || ActsAsTenant.current_tenant || Account.default
   end
 
   private
