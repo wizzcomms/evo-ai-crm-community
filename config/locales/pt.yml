@@ -189,17 +189,17 @@ pt:
       description: 'Dashboard Apps allow you to create and embed applications that display user information, orders, or payment history, providing more context to your customer support agents.'
     oauth_applications:
       name: 'Aplicações OAuth'
-      description: 'Aplicações OAuth permitem que aplicativos externos acessem de forma segura os dados da sua conta Evolution por meio da autenticação OAuth 2.0. Crie aplicativos para habilitar integrações de terceiros com controles de autorização apropriados.'
+      description: 'Aplicações OAuth permitem que aplicativos externos acessem de forma segura os dados da sua conta WizzDesk por meio da autenticação OAuth 2.0. Crie aplicativos para habilitar integrações de terceiros com controles de autorização apropriados.'
     dyte:
       name: 'Dyte'
-      description: 'Dyte is a product that integrates audio and video functionalities into your application. With this integration, your agents can start video/voice calls with your customers directly from Evolution.'
+      description: 'Dyte is a product that integrates audio and video functionalities into your application. With this integration, your agents can start video/voice calls with your customers directly from WizzDesk.'
       meeting_name: '%{agent_name} iniciou uma reunião'
     slack:
       name: 'Slack'
-      description: "Integrate Evolution with Slack to keep your team in sync. This integration allows you to receive notifications for new conversations and respond to them directly within Slack's interface."
+      description: "Integrate WizzDesk with Slack to keep your team in sync. This integration allows you to receive notifications for new conversations and respond to them directly within Slack's interface."
     webhooks:
       name: 'Webhooks'
-      description: 'Webhook events provide real-time updates about activities in your Evolution account. You can subscribe to your preferred events, and Evolution will send you HTTP callbacks with the updates.'
+      description: 'Webhook events provide real-time updates about activities in your WizzDesk account. You can subscribe to your preferred events, and WizzDesk will send you HTTP callbacks with the updates.'
     openai:
       name: 'OpenAI'
       description: 'Leverage the power of large language models from OpenAI with the features such as reply suggestions, summarization, message rephrasing, spell-checking, and label classification.'

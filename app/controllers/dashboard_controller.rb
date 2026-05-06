@@ -41,14 +41,15 @@ class DashboardController < ActionController::Base
 
   def custom_config
     {
-      'INSTALLATION_NAME' => 'Evolution',
-      'BRAND_NAME' => 'Evolution',
-      'LOGO' => 'https://evolution-api.com/files/evo/logo-evo-ai.svg',
-      'LOGO_DARK' => 'https://evolution-api.com/files/evo/logo-evo-ai-dark.svg',
-      'LOGO_THUMBNAIL' => 'https://evolution-api.com/files/evo/favicon.svg',
-      'WIDGET_BRAND_URL' => 'https://evo-ai.co',
-      'PRIVACY_URL' => 'https://evoapicloud.com/privacy-policy.html',
-      'TERMS_URL' => 'https://evoapicloud.com/terms-of-use.html',
+      'INSTALLATION_NAME' => 'WizzDesk',
+      'BRAND_NAME' => 'WizzDesk',
+      'LOGO' => '/brand-assets/logo.svg',
+      'LOGO_DARK' => '/brand-assets/logo_dark.png',
+      'LOGO_THUMBNAIL' => '/brand-assets/logo_thumbnail.png',
+      'WIDGET_BRAND_URL' => 'https://wizzcomms.com',
+      'BRAND_URL' => 'https://wizzcomms.com',
+      'PRIVACY_URL' => 'https://wizzcomms.com/privacy-policy',
+      'TERMS_URL' => 'https://wizzcomms.com/terms-of-service',
       'DISPLAY_MANIFEST' => false
     }
   end

@@ -104,6 +104,6 @@ class Crm::Leadsquared::SetupService
   end
 
   def brand_name
-    ::GlobalConfig.get('BRAND_NAME')['BRAND_NAME'].presence || 'Evolution'
+    ::GlobalConfig.get('BRAND_NAME')['BRAND_NAME'].presence || 'WizzDesk'
   end
 end

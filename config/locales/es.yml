@@ -189,14 +189,14 @@ es:
       description: 'Las aplicaciones de panel te permiten crear e incrustar aplicaciones que muestran información de usuario, pedidos o historial de pagos, proporcionando más contexto a tus agentes de soporte al cliente.'
     dyte:
       name: 'Dyte'
-      description: 'Dyte es un producto que integra funcionalidades de audio y video en tu aplicación. Con esta integración, tus agentes pueden iniciar llamadas de video/voz con tus clientes directamente desde Evolution.'
+      description: 'Dyte es un producto que integra funcionalidades de audio y video en tu aplicación. Con esta integración, tus agentes pueden iniciar llamadas de video/voz con tus clientes directamente desde WizzDesk.'
       meeting_name: '%{agent_name} ha iniciado una reunión'
     slack:
       name: 'Slack'
-      description: "Integra Evolution con Slack para mantener a tu equipo sincronizado. Esta integración te permite recibir notificaciones de nuevas conversaciones y responder directamente desde la interfaz de Slack."
+      description: "Integra WizzDesk con Slack para mantener a tu equipo sincronizado. Esta integración te permite recibir notificaciones de nuevas conversaciones y responder directamente desde la interfaz de Slack."
     webhooks:
       name: 'Webhook'
-      description: 'Los eventos de webhook proporcionan actualizaciones en tiempo real sobre las actividades en tu cuenta de Evolution. Puedes suscribirte a los eventos que prefieras y Evolution te enviará llamadas HTTP con las actualizaciones.'
+      description: 'Los eventos de webhook proporcionan actualizaciones en tiempo real sobre las actividades en tu cuenta de WizzDesk. Puedes suscribirte a los eventos que prefieras y WizzDesk te enviará llamadas HTTP con las actualizaciones.'
     openai:
       name: 'OpenAI'
       description: 'Aprovecha el poder de los grandes modelos de lenguaje de OpenAI con funciones como sugerencias de respuestas, resúmenes, reformulación de mensajes, corrección ortográfica y clasificación de etiquetas.'

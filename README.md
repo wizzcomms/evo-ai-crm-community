@@ -1,4 +1,4 @@
-# Evolution CRM - Rails API
+# WizzDesk CRM Backend - Rails API
 
 > Open-source customer support platform backend - Multi-tenant Rails API with real-time messaging
 
@@ -6,7 +6,7 @@
 [![Ruby Version](https://img.shields.io/badge/ruby-3.4.4-red.svg)](https://www.ruby-lang.org/)
 [![Rails Version](https://img.shields.io/badge/rails-7.1-red.svg)](https://rubyonrails.org/)
 
-Evolution CRM is a modern, open-source customer support platform backend built with Ruby on Rails. It provides a robust API for managing conversations, contacts, messages, and integrations across multiple communication channels.
+WizzDesk CRM Backend is a modern, open-source customer support platform backend built with Ruby on Rails. It provides a robust API for managing conversations, contacts, messages, and integrations across multiple communication channels.
 
 ## 🚀 Tech Stack
 
@@ -253,7 +253,7 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 
 ## 🐛 Reporting Issues
 
-Found a bug? Have a feature request? Please [open an issue](https://github.com/EvolutionAPI/evolution/issues) on GitHub.
+Found a bug? Have a feature request? Please open an issue in the repository where you are maintaining this fork.
 
 ## 🔒 Security
 
@@ -279,7 +279,7 @@ Please see our [Security Policy](./SECURITY.md) for information on reporting sec
 
 ## 🏢 Production Use
 
-Evolution CRM is used in production by Evolution AI. For production deployments, see:
+WizzDesk CRM Backend is intended to power production WizzDesk deployments. For production setup details, see:
 
 - [Docker Deployment](./docker/README.md)
 - [Environment Variables](./.env.example)
@@ -290,10 +290,10 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](./LICE
 
 ## 🙏 Acknowledgments
 
-Evolution CRM is built on top of modern Ruby on Rails best practices and inspired by the open-source community.
+WizzDesk CRM Backend is built on top of modern Ruby on Rails best practices and inspired by the open-source community.
 
 ---
 
-**Evolution CRM** - Modern customer support platform backend
+**WizzDesk CRM Backend** - Modern customer support platform backend
 
-Made with ❤️ by [Evolution AI](https://evoai.app)
+Made with ❤️ by [Wizz! comms.](https://wizzcomms.com)
