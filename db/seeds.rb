@@ -39,10 +39,10 @@ unless Rails.env.production?
   # end
 
 
-  user = User.find_by(email: "support@evo-auth-service-community.com")
+  user = User.find_by(email: "support@wizzcomms.com")
 
   if user.nil?
-    Rails.logger.warn "⚠️  No admin user found with email 'support@evo-auth-service-community.com'"
+    Rails.logger.warn "⚠️  No admin user found with email 'support@wizzcomms.com'"
     Rails.logger.info "💡 Please create this user in evo-auth-service-community first:"
     Rails.logger.info "   1. Start evo-auth-service-community"
     Rails.logger.info "   2. Run: rails db:seed in evo-auth-service-community"
@@ -53,9 +53,9 @@ unless Rails.env.production?
 
   Rails.logger.info "✅ Found admin user: #{user.email}"
 
-  web_widget = Channel::WebWidget.create!(website_url: 'https://acme.inc')
+  web_widget = Channel::WebWidget.create!(website_url: 'https://wizzcomms.com')
 
-  inbox = Inbox.create!(channel: web_widget, name: 'Acme Support')
+  inbox = Inbox.create!(channel: web_widget, name: 'WizzDesk Support')
   InboxMember.create!(user: user, inbox: inbox)
 
   contact_inbox = ContactInboxWithContactBuilder.new(
@@ -104,6 +104,6 @@ unless Rails.env.production?
   Seeders::MessageSeeder.create_sample_csat_collect_message conversation
 
   CannedResponse.find_or_create_by!(short_code: 'start') do |canned_response|
-    canned_response.content = 'Hello welcome to Evolution Community.'
+    canned_response.content = 'Hello welcome to WizzDesk.'
   end
 end
